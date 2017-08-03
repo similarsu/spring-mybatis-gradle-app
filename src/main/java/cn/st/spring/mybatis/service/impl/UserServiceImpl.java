@@ -1,6 +1,9 @@
 package cn.st.spring.mybatis.service.impl;
 
+import cn.st.spring.mybatis.entity.SysUser;
+import cn.st.spring.mybatis.mapper.SysUserMapper;
 import cn.st.spring.mybatis.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -8,8 +11,11 @@ import org.springframework.stereotype.Service;
  */
 @Service("userService")
 public class UserServiceImpl implements UserService{
-    @Override
-    public void add() {
+    @Autowired
+    private SysUserMapper sysUserMapper;
 
+    @Override
+    public SysUser findById(int id) {
+        return sysUserMapper.selectByPrimaryKey(id);
     }
 }
