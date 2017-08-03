@@ -10,11 +10,11 @@ repositories {
 
 dependencies {
     compile 'com.google.guava:guava:21.0'
-
+    compile group: 'org.springframework', name: 'spring-context', version: '4.3.10.RELEASE'
     testCompile 'junit:junit:4.12'
 }
 
-mainClassName = 'App'
+mainClassName = 'cn.st.spring.mybatis.Application'
 
 ext {
     profile = System.getProperty("profile","dev")
