@@ -16,3 +16,19 @@ dependencies {
 
 mainClassName = 'App'
 
+ext {
+    profile = System.getProperty("profile","dev")
+}
+
+def loadProfile(){
+    println "Load profile for ${profile}"
+    def profileFile=file('settings.groovy')
+    return new ConfigSlurper(profile).parse(profileFile.toURI().toURL()).toProperties()
+}
+import org.apache.tools.ant.filters.ReplaceTokens
+processResources {
+    from(sourceSets.main.resources.srcDirs){
+        filter(ReplaceTokens,tokens:loadProfile())
+    }
+}
+
