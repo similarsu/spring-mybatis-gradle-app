@@ -53,9 +53,9 @@ task mybatisGenerate {
     doLast {
         ant.properties['targetProject'] = projectDir.path
         ant.properties['driverClass'] = "com.mysql.jdbc.Driver"
-        ant.properties['connectionURL'] = "jdbc:mysql://work.kydee.cn:3306/jdasst_dev?useUnicode=true&characterEncoding=utf8"
-        ant.properties['userId'] = "jdasst_dev"
-        ant.properties['password'] = "jdasst_dev"
+        ant.properties['connectionURL'] = "jdbc:mysql://localhost:3306/dev?useUnicode=true&characterEncoding=utf8"
+        ant.properties['userId'] = "dev"
+        ant.properties['password'] = "dev"
         ant.properties['src_main_java'] = sourceSets.main.java.srcDirs[0].path
         ant.properties['src_main_resources'] = sourceSets.main.resources.srcDirs[0].path
         ant.properties['modelPackage'] = "cn.st.spring.mybatis.entity"

@@ -1,10 +1,10 @@
 package cn.st.spring.mybatis.service;
 
-import cn.st.spring.mybatis.entity.SysUser;
+import cn.st.spring.mybatis.entity.GovUser;
 
 /**
  * Created by coolearth on 17-8-3.
  */
 public interface UserService {
-    SysUser findById(int id);
+    GovUser findById(int id);
 }
