@@ -15,10 +15,10 @@
         <context:component-scan base-package="cn.st.spring.mybatis"></context:component-scan>
 
         <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
-                <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-                <property name="jdbcUrl" value="jdbc:mysql://work.kydee.cn:3306/jdasst_dev?useUnicode=true&amp;characterEncoding=utf8"/>
-                <property name="user" value="jdasst_dev"/>
-                <property name="password" value="jdasst_dev"/>
+                <property name="driverClass" value="@jdbc.driver@"/>
+                <property name="jdbcUrl" value="@jdbc.url@"/>
+                <property name="user" value="@jdbc.user@"/>
+                <property name="password" value="@jdbc.password@"/>
         </bean>
 
 
