@@ -2,9 +2,9 @@ environments {
     dev {
         jdbc {
             driver = 'com.mysql.jdbc.Driver'
-            url ='jdbc:mysql://work.kydee.cn:3306/jdasst_dev?useUnicode=true&amp;characterEncoding=utf8'
-            user = 'jdasst_dev'
-            password = 'jdasst_dev'
+            url ='jdbc:mysql://localhost:3306/dev?useUnicode=true&amp;characterEncoding=utf8'
+            user = 'dev'
+            password = 'dev'
         }
     }
 
