@@ -32,6 +32,9 @@ ext {
     profile = System.getProperty("profile","dev")
 }
 
+sourceCompatibility=JavaVersion.VERSION_1_8
+targetCompatibility=JavaVersion.VERSION_1_8
+
 def loadProfile(){
     println "Load profile for ${profile}"
     def profileFile=file('settings.groovy')
