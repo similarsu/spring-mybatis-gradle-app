@@ -14,7 +14,6 @@ services:
   init:
     build: ./init
     volumes:
-      - ./init/bin:/mnt/bin
       - ./init/sql:/mnt/sql
     depends_on:
       - db
