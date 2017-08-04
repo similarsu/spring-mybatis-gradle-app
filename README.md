@@ -5,5 +5,5 @@
 ```
 ## 如何使用
 ```
-gradle build -Dprofile=prod
+./gradlew clean run -Dprofile=prod
 ```
