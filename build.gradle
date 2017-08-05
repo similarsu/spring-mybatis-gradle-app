@@ -24,6 +24,7 @@ dependencies {
     compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.43'
     mybatisGenerator group: 'tk.mybatis', name: 'mapper', version: '3.4.2'
     testCompile 'junit:junit:4.12'
+    testCompile group: 'org.springframework', name: 'spring-test', version: '4.3.10.RELEASE'
 }
 
 mainClassName = 'cn.st.spring.mybatis.Application'
