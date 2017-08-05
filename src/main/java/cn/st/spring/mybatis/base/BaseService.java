@@ -1,7 +1,5 @@
 package cn.st.spring.mybatis.base;
 
-import cn.st.spring.mybatis.base.BaseEntity;
-
 import java.util.List;
 
 /**
