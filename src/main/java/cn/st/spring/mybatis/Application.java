@@ -11,7 +11,7 @@ public class Application {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context=new ClassPathXmlApplicationContext("spring.xml");
         UserService userService= (UserService) context.getBean("userService");
-        GovUser govUser=userService.findById(1);
+        GovUser govUser=userService.load(1);
         System.out.println(govUser.getChineseName());
     }
 }
