@@ -1,5 +1,7 @@
 package cn.st.spring.mybatis.base;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 /**
@@ -13,11 +15,13 @@ public class BaseServiceImpl<E,S> implements BaseService<E,S>{
     }
 
     @Override
+    @Transactional
     public void add(E entity) {
         baseMapper.insert(entity);
     }
 
     @Override
+    @Transactional
     public void update(E entity) {
         baseMapper.updateByPrimaryKeySelective(entity);
     }
@@ -28,6 +32,7 @@ public class BaseServiceImpl<E,S> implements BaseService<E,S>{
     }
 
     @Override
+    @Transactional
     public void delete(int id) {
         baseMapper.deleteByPrimaryKey(id);
     }
