@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="consoleAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                @logger.pattern@
+            </Pattern>
+        </layout>
+    </appender>
+
+    <appender name="fileRollingAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>@logger.dir@_all_%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>@logger.pattern@</pattern>
+        </encoder>
+    </appender>
+
+    <root level="@logger.root.level@">
+        <appender-ref ref="@logger.root.appender@" />
+    </root>
+
+    <logger name="cn.st.spring.mybatis" level="@logger.me.level@" additivity="false">
+        <appender-ref ref="@logger.me.appender@" />
+    </logger>
+
+    <logger name="org.apache.ibatis" level="@logger.sql.level@" additivity="false">
+        <appender-ref ref="@logger.sql.appender@" />
+    </logger>
+
+
+    <logger name="java.sql"  level="@logger.sql.level@" additivity="false">
+        <appender-ref ref="@logger.sql.appender@" />
+    </logger>
+
+</configuration>

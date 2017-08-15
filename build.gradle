@@ -12,6 +12,10 @@ configurations {
     mybatisGenerator
 }
 
+configurations.all {
+    exclude group : 'commons-logging',module:'commons-logging'
+}
+
 dependencies {
     compile 'com.google.guava:guava:21.0'
     compile group: 'org.springframework', name: 'spring-context', version: '4.3.10.RELEASE'
@@ -23,6 +27,9 @@ dependencies {
     mybatisGenerator group: 'mysql', name: 'mysql-connector-java', version: '5.1.43'
     compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.43'
     mybatisGenerator group: 'tk.mybatis', name: 'mapper', version: '3.4.2'
+    compile group: 'org.slf4j', name: 'jcl-over-slf4j', version: '1.7.25'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
+
     testCompile 'junit:junit:4.12'
     testCompile group: 'org.springframework', name: 'spring-test', version: '4.3.10.RELEASE'
 }
