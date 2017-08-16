@@ -37,6 +37,21 @@ environments {
 
         logger {
             pattern = '%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n'
+            dir = ''
+            root {
+                level = 'WARN'
+                appender = 'consoleAppender'
+            }
+
+            me {
+                level = 'DEBUG'
+                appender = 'consoleAppender'
+            }
+
+            sql {
+                level = 'DEBUG'
+                appender = 'consoleAppender'
+            }
         }
     }
 
@@ -50,6 +65,21 @@ environments {
 
         logger {
             pattern = '%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n'
+            dir = ''
+            root {
+                level = 'WARN'
+                appender = 'consoleAppender'
+            }
+
+            me {
+                level = 'DEBUG'
+                appender = 'consoleAppender'
+            }
+
+            sql {
+                level = 'DEBUG'
+                appender = 'consoleAppender'
+            }
         }
     }
 }
